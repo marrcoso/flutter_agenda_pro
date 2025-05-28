@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_agenda_pro/components/Button.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,8 +9,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
-      body: Column(children: [
-
+      backgroundColor: Colors.blueAccent,
+      body: Column(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Button(
+                nome: 'Login',
+                corBorda: Color(0xffE9ECFC),
+                corTexto: Color(0xffE9ECFC),
+              ),
+              SizedBox(height: 10),
+              Button(
+                nome: 'Iniciar Teste Grátis',
+                corFundo: Color(0xffE9ECFC),
+                corTexto: Colors.blueAccent,
+                corBorda: Colors.blueAccent,
+              ),
+            ],
+          ),
         ],
       ),
     );
