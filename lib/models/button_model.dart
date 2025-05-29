@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatelessWidget {
+class ButtonModel extends StatelessWidget {
   final String nome;
   final Color corBorda;
   final Color? corFundo;
   final Color corTexto;
+  final EdgeInsetsGeometry? buttonPadding;
 
-  const Button({
+  const ButtonModel({
     super.key,
     required this.nome,
     required this.corBorda,
     this.corFundo,
     required this.corTexto,
+    this.buttonPadding,
   });
 
   @override
@@ -24,13 +26,11 @@ class Button extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           border: Border.all(color: corBorda, width: 2.0),
         ),
-        padding: EdgeInsetsGeometry.only(
-          left: 15,
-          right: 15,
-          top: 5,
-          bottom: 5,
-        ),
+        padding:
+            buttonPadding ??
+            EdgeInsetsGeometry.only(left: 15, right: 15, top: 5, bottom: 5),
         child: Text(
+          textAlign: TextAlign.center,
           nome,
           style: TextStyle(
             color: corTexto,
