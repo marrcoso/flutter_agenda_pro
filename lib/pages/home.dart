@@ -9,25 +9,63 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(0xff645EFF),
       body: Column(
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Button(
-                nome: 'Login',
-                corBorda: Color(0xffE9ECFC),
-                corTexto: Color(0xffE9ECFC),
-              ),
-              SizedBox(height: 10),
-              Button(
-                nome: 'Iniciar Teste Grátis',
-                corFundo: Color(0xffE9ECFC),
-                corTexto: Colors.blueAccent,
-                corBorda: Colors.blueAccent,
-              ),
-            ],
+          Container(
+            margin: EdgeInsets.only(top: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'AgendaPro',
+                  style: TextStyle(color: Color(0xffE9ECFC), fontSize: 20),
+                ),
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Button(
+                        nome: 'Login',
+                        corBorda: Color(0xffE9ECFC),
+                        corTexto: Color(0xffE9ECFC),
+                      ),
+                      SizedBox(height: 10),
+                      Button(
+                        nome: 'Iniciar Teste Grátis',
+                        corFundo: Color(0xffE9ECFC),
+                        corTexto: Color(0xff645EFF),
+                        corBorda: Color(0xff645EFF),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30, top: 30),
+            child: Column(
+              children: [
+                Text(
+                  'Agenda inteligente para profissionais liberais',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 40,
+                    color: Color(0xffE9ECFC),
+                  ),
+                ),
+                Text(
+                  'Gerencie consultas, envie lembretes automáticos e facilite o contato com seus pacientes. A solução completa para psicólogos, terapeutas, nutricionistas e coaches.',
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14,
+                    color: Color(0xffE9ECFC),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -44,7 +82,7 @@ class HomePage extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(0xff645EFF),
       elevation: 0.0,
       centerTitle: true,
       leading: GestureDetector(
